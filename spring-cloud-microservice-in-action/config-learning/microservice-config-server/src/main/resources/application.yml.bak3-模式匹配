@@ -9,5 +9,5 @@ spring:
           repos:
             simple: https://git.oschina.net/it-much/simple
             special:
-              pattern: special*/dev*,special*/test*
+              pattern: special*/dev*,special*/test*    #匹配仓库下的多个应用，以special开头,适用于多个应用包含相同配置的情况
               uri: https://git.oschina.net/it-much/special

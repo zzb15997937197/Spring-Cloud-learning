@@ -1,0 +1,22 @@
+server:
+  port: 8080
+#配置git
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zzb15997937197/spring-cloud-config/
+          username: zzb15997937197
+          password: zzb123456.
+          clone-on-start: true
+#          search-paths:
+#            - foo   # foo路径
+#            - bar   # bar路径
+
+
+#日志
+logging:
+  level:
+    org.springframework.cloud: DEBUG
+    org.springframework.boot: DEBUG
