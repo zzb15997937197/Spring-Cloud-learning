@@ -14,9 +14,11 @@ spring:
 #            - foo   # foo路径
 #            - bar   # bar路径
 
-
 #日志
 logging:
   level:
     org.springframework.cloud: DEBUG
     org.springframework.boot: DEBUG
+
+
+

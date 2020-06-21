@@ -1,0 +1,5 @@
+
+1. 在config-client添加actuator模块后，通过/fresh接口，能够获取最新的git配置。
+但是其他config-client不能获取到最新的配置
+2. 改进: 在config-server模块中，添加actuator并 整合spring-cloud-bus，然后使用/refresh来刷新配置，这样连接到config-server的所有客户端
+都能够获取到git的最新配置。

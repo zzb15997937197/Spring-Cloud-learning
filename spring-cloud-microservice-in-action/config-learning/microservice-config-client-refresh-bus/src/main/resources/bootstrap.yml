@@ -2,11 +2,18 @@ spring:
   cloud:
     config:
       uri: http://localhost:8080
-      profile: dev
+      profile: uat
       label: master   # 当configserver的后端存储是Git时，默认就是master 
     bus:
       trace:
         enabled: true
+    stream:
+      bindings:
+        springCloudBusInput:
+          destination: springCloudBus
+          group: rabbitmqtest
+        springCloudBusOutput:
+          destination: springCloudBus
   application:
     name: foobar
   rabbitmq:
@@ -14,3 +21,8 @@ spring:
     port: 5672
     username: guest
     password: guest
+    virtual-host: /
+logging:
+  level:
+    org.springframework.cloud: DEBUG
+    org.springframework.boot: DEBUG
